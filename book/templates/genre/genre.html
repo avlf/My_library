@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> About {{genre}}</title>
+</head>
+<body>
+<h1>{{genre}}</h1>
+{% if genre.description %}
+    <h3>Описнаие жанра: </h3>
+    <h3>{{genre.description}}</h3>
+{% else %}
+    <h3>Описание отсутствует</h3>
+{% endif %}
+<a href="{%url 'library:genre_list'%}">back</a>
+</body>
+</html>
