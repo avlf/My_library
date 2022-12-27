@@ -34,7 +34,7 @@ class Author(models.Model):
     )
 
     def __str__(self):
-        return self.name
+        return self.first_name
 
 
 class Book(models.Model):
@@ -51,7 +51,6 @@ class Book(models.Model):
         Author,
         verbose_name=' Автор книги',
         related_name='book',
-        blank=True,
         # on_delete=models.CASCADE,
     )
     publish_date = models.DateField('Дата публикации ')

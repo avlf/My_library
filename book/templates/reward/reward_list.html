@@ -6,6 +6,14 @@
 </head>
 <body>
 <h1>Список наград</h1>
-{% if reward_list%}
+    {% if  reward_list %}
+        <ul>
+            {% for reward in reward_list %}
+                <li><a href="{% url 'library:reward' reward.id %}">{{ reward }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>Нет информации</h2>
+    {% endif %}
 </body>
 </html>

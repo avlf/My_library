@@ -13,5 +13,5 @@ urlpatterns = [
     path('genre_list/', views.GenreListView.as_view(), name='genre_list'),
     path('reward/<int:pk>/', views.RewardDetailView.as_view(), name='reward'),
     path('reward_list/', views.RewardListView.as_view(), name='reward_list'),
-
+    path('', views.main_view, name='main'),
 ]

@@ -1,4 +1,5 @@
 from django.views import generic
+from django.shortcuts import render
 
 from .models import Author, Book, Genre, Reward
 
@@ -49,3 +50,6 @@ class RewardDetailView(generic.DetailView):
     model = Reward
     template_name = 'reward/reward.html'
     context_object_name = "reward"
+
+def main_view(request):
+    return render(request, 'main.html')

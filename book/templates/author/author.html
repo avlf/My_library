@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>{{author}}</h1>
+<h2>{{author.second_name}}</h2>
+{% if author.description %}
+    <h3>Описнаие автора: </h3>
+    <h3>{{author.description}}</h3>
+{% else %}
+    <h3>Описание отсутствует</h3>
+{% endif %}
+{% if author.birthday %}
+    <h3>: </h3>
+    <h3>{{author.birthday}}</h3>
+{% else %}
+    <h3>день рождения отсутствует</h3>
+{% endif %}
+{% if author.deathday %}
+    <h3>: </h3>
+    <h3>{{author.deathday}}</h3>
+{% else %}
+    <h3>день смерти отсутствует</h3>
+{% endif %}
+<a href="{%url 'library:book_list'%}">back</a>
 </body>
 </html>

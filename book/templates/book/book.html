@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>{{book}}</h1>
+{% if book.description %}
+    <h3>Описнаие кинги: </h3>
+    <h3>{{book.description}}</h3>
+{% else %}
+    <h3>Описание отсутствует</h3>
+{% endif %}
+{% if book.description %}
+    <h3>Описнаие кинги: </h3>
+    <h3>{{book.description}}</h3>
+{% else %}
+    <h3>Описание отсутствует</h3>
+{% endif %}
+"""{% if book.genre %}
+    <h3>жанр кинги: </h3>
+    <h3>{{book.genre}}</h3>
+{% else %}
+    <h3>жанр отсутствует</h3>
+{% endif %}
+{% if book.author %}
+    <h3>автор кинги: </h3>
+    <h3>{{book.author}}</h3>
+{% else %}
+    <h3>автор отсутствует</h3>
+{% endif %}"""
+<a href="{%url 'library:book_list'%}">back</a>
 </body>
 </html>
